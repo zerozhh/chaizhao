@@ -1,0 +1,30 @@
+name: validate
+
+on:
+  push:
+    paths:
+      - "skills/**"
+      - "scripts/validate.py"
+      - ".github/workflows/validate.yml"
+  pull_request:
+    paths:
+      - "skills/**"
+      - "scripts/validate.py"
+      - ".github/workflows/validate.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 自建规范校验（frontmatter / 命名 / 长度 / 引用 / 无案例泄漏）
+        run: python3 scripts/validate.py
+
+      - name: 官方 skills-ref 校验（尽力而为，工具不可用时跳过）
+        run: |
+          if npx --yes skills-ref --version >/dev/null 2>&1; then
+            npx --yes skills-ref validate ./skills/chaizhao
+          else
+            echo "skills-ref CLI 当前不可用，已跳过（自建校验已通过）"
+          fi

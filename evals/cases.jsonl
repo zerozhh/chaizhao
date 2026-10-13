@@ -1,0 +1,13 @@
+{"id":"live-typhoon","type":"positive","input":"A:我们那边也刮台风 今天直接喜提停课一天 希望台风慢点走哈哈\nB:这边建议你直接退学知道吗你根本没心。多少人在自然灾害面前家破人亡人财两空你还搁这拿这种事情炫耀窃喜你没有心知道吗","must_find":["D4","F6","D1"],"optional":["C3"],"must_not_flag":["E3"],"notes":"D4承重：开心对象是停课非灾难；F6与E3同段时取F6为主定名，E3不得单独重复计；C3置信度中"}
+{"id":"live-qinshihuang","type":"positive","input":"A:秦始皇虽然施行暴政，焚书坑儒，但他统一六国开创了首个大一统王朝，这个功绩还是值得肯定的\nB:你觉得秦始皇的暴政合理？","must_find":["F13"],"optional":["D4"],"must_not_flag":["A1"],"notes":"让步结构「虽然」已预先回答；F13与D4同一动件取问句形态F13；置信度中（存在真诚追问读法）"}
+{"id":"live-skill-meta","type":"positive","input":"A:我做了个用于拆解别人逻辑谬误的 skill\nB:你不能要求所有人说话都完全符合逻辑啊","must_find":["D4"],"optional":[],"must_not_flag":["F1"],"notes":"工具存在≠普遍要求；B的善意内核（防滥用）放总评，不定罪"}
+{"id":"live-motive","type":"positive","input":"A:我做了个用于拆解别人逻辑谬误的 skill\nB:那你做这个不就是为了抬杠嘛","must_find":["D3"],"optional":["D6"],"must_not_flag":[],"notes":"断言式反问零论据；语域若判为朋友斗嘴则整条豁免（本用例按辩论语境）"}
+{"id":"syn-affirming-consequent","type":"positive","input":"如果下雨，地面会湿。现在地面湿了，所以刚才一定下了雨。","must_find":["H1"],"optional":[],"must_not_flag":["H2"],"notes":"经典AC无效式；不得与H2混淆"}
+{"id":"syn-no-true-scotsman","type":"positive","input":"真正的球迷永远不会骂自己主队。老王是球迷，他昨天骂了主队。那说明老王根本不是真正的球迷。","must_find":["F11"],"optional":[],"must_not_flag":["F2"],"notes":"反例出现后重新定义集合"}
+{"id":"syn-sunk-cost","type":"positive","input":"我都排队排了两个小时了，虽然队伍完全不动了，但现在走掉的话前面两小时不就白排了，再等等吧。","must_find":["G5"],"optional":[],"must_not_flag":[],"notes":"不可回收成本被用于论证继续投入"}
+{"id":"syn-loaded-question","type":"positive","input":"你什么时候停止抄袭别人的论文的？","must_find":["F13"],"optional":[],"must_not_flag":[],"notes":"问题内嵌未承认前提「你抄过」"}
+{"id":"syn-moderation","type":"positive","input":"他说是你先动的手，你说是他先动的手。要我说一个巴掌拍不响，你们俩都有错，各退一步算了。","must_find":["F9"],"optional":[],"must_not_flag":[],"notes":"责任判定不靠折中算出"}
+{"id":"syn-false-equivalence","type":"positive","input":"美国也有贫民窟和警察暴力，所以咱们这儿的腐败根本不算个事儿，天下乌鸦一般黑。","must_find":["A9"],"optional":["D2"],"must_not_flag":[],"notes":"「都有问题」≠「问题一样大」；whataboutism作optional括注"}
+{"id":"neg-register-joke","type":"negative","input":"哈哈哈哈今天台风放假！躺平一天，谁也别找我！","must_find":[],"optional":[],"must_not_flag":["*"],"notes":"语域豁免：生活分享+玩笑，不承担论证功能，任何定罪都是误报"}
+{"id":"neg-valid-syllogism","type":"negative","input":"所有金属都导电，铜是金属，所以铜导电。","must_find":[],"optional":[],"must_not_flag":["*"],"notes":"有效三段论（Barbara式）；任何H类标记都是误报"}
+{"id":"neg-valid-modus-tollens","type":"negative","input":"如果灯丝断了，灯就不会亮。现在灯还亮着，所以灯丝肯定没断。","must_find":[],"optional":[],"must_not_flag":["H1","H2"],"notes":"有效否定后件MT——最高危误报场景：不得判成肯定后件H1或否定前件H2"}

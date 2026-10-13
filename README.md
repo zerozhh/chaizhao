@@ -78,12 +78,19 @@
 chaizhao/
 ├── README.md
 ├── LICENSE
+├── scripts/
+│   └── validate.py             # Agent Skills 规范校验器（CI 同款，可本地跑）
+├── evals/
+│   ├── README.md               # 评测指标：误报率/漏报率/定名准确/置信度校准
+│   └── cases.jsonl             # 13 个回归用例（正样本 ×10 + 负样本 ×3）
+├── .github/workflows/          # push/PR 自动校验 frontmatter 与引用完整性
 └── skills/
     └── chaizhao/
-        ├── SKILL.md              # 路由 + 四步法 + 62 类速查表（自包含，可单独粘贴使用）
-        └── references/           # 九套方法论，按需加载（渐进披露）
-            ├── fallacies.md      # 62 类谬误全条目：定义/信号/弹药/反驳句 + 30+ 变体归并
-            ├── formal-checks.md  # 形式检验：条件句四式/三段论/概率形式 + 有效形式对照表
+        ├── SKILL.md            # 路由 + 四步法 + 62 类速查表（自包含，可单独粘贴使用）
+        └── references/         # 十套参考文件，按需加载（渐进披露）
+            ├── fallacies.md        # 62 类谬误全条目（中文）：定义/信号/弹药/反驳句 + 30+ 变体归并
+            ├── fallacies-en.md     # English edition（编号与中文版一一对应 + 英文话语原生变体）
+            ├── formal-checks.md    # 形式检验：条件句四式/三段论/概率形式 + 有效形式对照表
             ├── reconstruction.md # 论证重构：语域判定/论证图/省略前提补全/概念澄清术
             ├── ammunition.md     # 举证弹药八式：构造步骤 + 质检标准 + 失败模式
             ├── canon.md          # 经典案例库：公共例证按谬误索引（巴斯夏/罗素茶壶/守株待兔…）
@@ -103,12 +110,12 @@ chaizhao/
 
 ## 🗺 Roadmap
 
-- [x] 多方辩论的逐发言评分（✅ v1.2.0 已实现：「辩论简报」模式）
-- [ ] 英文谬误包（`fallacies-en` 参考文件，62 类对齐翻译 + 英文话语惯用变体）
-- [ ] 评测基准集（evals）：以误报率 / 漏报率为核心指标的回归测试
-- [ ] 事实核查工具联动（`scripts/`，「待核实」标注的自动补证）
-- [ ] CI 规范校验（GitHub Actions 跑 `skills-ref validate`，frontmatter 违规即红灯）
-- [ ] 提交 [agentskills.io](https://agentskills.io) 社区目录与 awesome 类清单收录
+- [x] 多方辩论的逐发言评分（✅ v1.2.0：「辩论简报」模式）
+- [x] CI 规范校验（✅ v1.3.0：`scripts/validate.py` + GitHub Actions）
+- [x] 评测基准集（✅ v1.3.0：`evals/` 13 用例，含语域豁免与有效推理两类负样本）
+- [x] 英文谬误包（✅ v1.3.0：`references/fallacies-en.md`，编号对齐 + 英文原生变体归并）
+- [ ] 事实核查工具联动（唯一保留项：需外部 API + 密钥，与「零依赖」冲突——做成可选插件时再启用）
+- [ ] 社区收录（agentskills.io 无官方技能目录；候选渠道为 awesome-claude-skills 等 GitHub 清单，提交文案见下方）
 
 ## 📜 License
 

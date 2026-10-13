@@ -3,7 +3,7 @@ name: chaizhao
 description: 拆招——拆解话语中的逻辑谬误并逐条举证的通用分析技能。先钢人重构论证再定罪，每条谬误输出完整证据链：原文锚点、谬误定名（中英）、机制拆解、举证、反驳句，并区分承重谬误与次要毛病。62 类谬误全库（含形式谬误与有效形式对照）、八类举证弹药、五种输出模式（分析体/口播稿/反驳卡片/辩论简报/教学体）。当用户贴出一段话、评论、语录、文章、演讲、对话或辩论发言，问「说得对吗」「有没有逻辑问题」「怎么回怼」「帮我反驳」「分析这场辩论」「教我识别谬误」时使用；英文触发词：find logical fallacies, analyze this argument, is this reasoning valid, help me rebut。/chaizhao <文本> 直接触发。
 license: MIT
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
 ---
 
 # 拆招 · 逻辑谬误拆解与举证
@@ -18,6 +18,7 @@ metadata:
 |---|---|
 | 还原论证、补隐含前提、澄清概念、判语域 | [references/reconstruction.md](references/reconstruction.md) |
 | 查单个谬误的定义、识别信号、弹药、反驳句 | [references/fallacies.md](references/fallacies.md) |
+| 英文文本分析 / 查英文条目 | [references/fallacies-en.md](references/fallacies-en.md)（编号与中文版一一对应） |
 | 文本含显式条件句/三段论/概率推理，先做形式检验 | [references/formal-checks.md](references/formal-checks.md) |
 | 两个谬误拿不准；判断"推理错了结论是否也错" | [references/confusions.md](references/confusions.md) |
 | 定罪前防误伤自查 | [references/pitfalls.md](references/pitfalls.md) |
