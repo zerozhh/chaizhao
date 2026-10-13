@@ -1,0 +1,7 @@
+# 本地 agent 配置（skills 已由软链接指向 skills/chaizhao，不需入库）
+.claude/
+
+# 原始素材（口播转写稿与结构化示例），不随 skill 发布；如需公开可删除此行
+拆解示例/
+
+.DS_Store
