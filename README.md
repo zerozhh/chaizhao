@@ -103,10 +103,12 @@ chaizhao/
 
 ## 🗺 Roadmap
 
-- [ ] 英文谬误包（`fallacies-en` 参考文件）
-- [ ] 多方辩论的逐发言评分模式
-- [ ] 事实核查工具联动（`scripts/`）
-- [ ] 评测基准集（evals）
+- [x] 多方辩论的逐发言评分（✅ v1.2.0 已实现：「辩论简报」模式）
+- [ ] 英文谬误包（`fallacies-en` 参考文件，62 类对齐翻译 + 英文话语惯用变体）
+- [ ] 评测基准集（evals）：以误报率 / 漏报率为核心指标的回归测试
+- [ ] 事实核查工具联动（`scripts/`，「待核实」标注的自动补证）
+- [ ] CI 规范校验（GitHub Actions 跑 `skills-ref validate`，frontmatter 违规即红灯）
+- [ ] 提交 [agentskills.io](https://agentskills.io) 社区目录与 awesome 类清单收录
 
 ## 📜 License
 
